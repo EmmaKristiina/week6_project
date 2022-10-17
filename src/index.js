@@ -17,7 +17,7 @@ if (document.readyState !== "loading") {
   console.log("valmis");
   initialize();
 } else {
-  document.addEventListener("DOMContetntLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     console.log("else valmis");
     initialize();
   });
@@ -81,6 +81,7 @@ function initialize() {
       "https://statfin.stat.fi/PxWeb/api/v1/en/StatFin/synt/statfin_synt_pxt_12dy.px";
     const res = await fetch(url, {
       method: "POST",
+      headers: { "content-type": "application/json" },
       body: JSON.stringify(JQ)
     });
     if (!res.ok) {
@@ -116,9 +117,8 @@ function initialize() {
       data: ChartData,
       type: "line",
       height: 450,
-      color: ["##eb5146"]
+      colors: ["##eb5146"]
     });
-    console.log("4");
   };
 
   newChart();
