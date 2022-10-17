@@ -1,4 +1,5 @@
 import "./styles.css";
+import { Chart } from "frappe-charts";
 //import { Chart } from "frappe-charts/dist/frappe-charts.min.esm";
 
 /*
@@ -16,7 +17,7 @@ if (document.readyState !== "loading") {
   console.log("valmis");
   initialize();
 } else {
-  document.addEventListener("DOMContetntLoaded", function () {
+  document.addEventListener()("DOMContetntLoaded", function () {
     console.log("else valmis");
     initialize();
   });
@@ -110,7 +111,7 @@ function initialize() {
       ]
     };
     console.log("ttt");
-    const chart = new frappe.Chart("#chart", {
+    const chart = new Chart("#chart", {
       title: "Tässä vois olla joku kiva otsikko",
       data: ChartData,
       type: "line",
