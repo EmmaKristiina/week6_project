@@ -117,8 +117,8 @@ function initialize() {
       data: ChartData,
       type: "line",
       height: 450,
-      colors: ["##eb5146"],
-      circle: [(124, 214, 253)]
+      colors: ["#eb5146"]
+
     });
   };
 
